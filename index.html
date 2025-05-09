@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Compression Tool with Huffman Tree Visualizer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="https://d3js.org/d3.v5.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/ce79a38f63.js" crossorigin="anonymous"></script>
+
+</head>
+<body class="light-mode">
+    <button class="toggle-btn" onclick="toggleDarkMode()"><i class="fa-regular fa-moon" style="font-size: 25px;"></i></button>
+
+    <div class="container">
+        <h1>Advance Text Compression Tool with Huffman</h1>
+        <textarea id="input-text" placeholder="Enter your text here or upload a file"></textarea>
+        <input type="file" id="file-input" accept=".txt">
+        <button onclick="compressText()">Compress</button>
+        <h3>Huffman Tree Visualization</h3>
+        <div id="huffman-tree"></div>
+        <button onclick="clearTree()">Clear Tree</button>
+        <div id="results"></div>
+        <div id="compressed-content" class="scrollable-content"></div>
+        <div id="huffman-mapping"></div>
+        <div class="chart-container">
+            <canvas id="compressionChart"></canvas>
+        </div>
+    </div>
+
+    <script src="huffman.js"></script>
+</body>
+</html>
